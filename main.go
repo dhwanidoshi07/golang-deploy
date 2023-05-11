@@ -14,9 +14,13 @@ type User struct {
 	Username string `json:"username"`
 	Email    string `json:"email"`
 }
+var users = []User{
+    {ID: 1, Username: "Blue Train", Email: "John Coltrane"},
+    {ID: 2, Username: "Jeru", Email: "Gerry Mulligan"},
+    {ID: 3, Username: "Sarah Vaughan and Clifford Brown", Email: "Sarah Vaughan"},
+}
 
-var users []User
-var nextID = 1
+var nextID = 4
 
 func CreateUser(w http.ResponseWriter, r *http.Request) {
 	var user User
